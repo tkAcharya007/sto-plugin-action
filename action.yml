@@ -239,6 +239,10 @@ outputs:
     description: 'Full path to the output file'
     value: ${{ steps.scan.outputs.output-file-path }}
 
+  execution-url:
+    description: 'URL of the GitHub Actions run that orchestrated this scan'
+    value: ${{ steps.scan.outputs.execution-url }}
+
 runs:
   using: 'composite'
   steps:
@@ -422,6 +426,15 @@ runs:
         DOCKER_CMD="$DOCKER_CMD -e TARGET_TYPE=${{ inputs.target-type }}"
 
         # ======================================================================
+        # EXECUTION CONTEXT (link back to the GHA run that orchestrated this)
+        # Composed from runner context so it resolves correctly on github.com,
+        # GitHub Enterprise Cloud, and GitHub Enterprise Server with no config.
+        # ======================================================================
+        BUILD_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        DOCKER_CMD="$DOCKER_CMD -e BUILD_URL=$BUILD_URL"
+        echo "execution-url=$BUILD_URL" >> $GITHUB_OUTPUT
+
+        # ======================================================================
         # TARGET METADATA (auto-detect from GitHub context if not provided)
         # ======================================================================
         if [ -n "${{ inputs.target-name }}" ]; then
@@ -550,5 +563,6 @@ runs:
           echo ""
           echo "Scan ID: ${{ steps.scan.outputs.scan-id }}"
           echo "Status: ${{ steps.scan.outputs.status }}"
+          echo "Execution URL: ${{ steps.scan.outputs.execution-url }}"
           echo "============================================================"
         fi
