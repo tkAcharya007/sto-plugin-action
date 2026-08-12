@@ -1,0 +1,9 @@
+action.yml
+  7831ae52-7447-4173-b6c8-f76c909081a2 434,436-437,525,527-528,531,554-555,558,560
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "d85e9dc564441f554542da1b13767d758a3fef7f",
+  "prompts": {}
+}
