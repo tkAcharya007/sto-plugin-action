@@ -1,0 +1,35 @@
+action.yml
+  b0cd2806-01ba-4851-bee6-3f913fb98650 189-193,551-553
+  7831ae52-7447-4173-b6c8-f76c909081a2 14-25,28,33-35,38-40,431,433-469
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "586bf03ab978d6d8be20bcc0ac02a97373062f1e",
+  "prompts": {
+    "66d8ade3a48311d3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b0cd2806-01ba-4851-bee6-3f913fb98650",
+        "model": "auto-smart"
+      },
+      "human_author": "Tarun Kumar Acharya <tarunkumar.acharya@harness.io>",
+      "total_additions": 8,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "e85dbb4b1213b8ec": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7831ae52-7447-4173-b6c8-f76c909081a2",
+        "model": "auto-smart"
+      },
+      "human_author": "Tarun Kumar Acharya <tarunkumar.acharya@harness.io>",
+      "total_additions": 57,
+      "total_deletions": 12,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
