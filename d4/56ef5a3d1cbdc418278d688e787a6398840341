@@ -1,0 +1,22 @@
+action.yml
+  ab26c97d-e749-4576-acb4-69467000285b 525-526
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "d456ef5a3d1cbdc418278d688e787a6398840341",
+  "prompts": {
+    "bc602a081c0fd1ce": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ab26c97d-e749-4576-acb4-69467000285b",
+        "model": "auto-smart"
+      },
+      "human_author": "Tarun Kumar Acharya <tarunkumar.acharya@harness.io>",
+      "total_additions": 2,
+      "total_deletions": 2,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
